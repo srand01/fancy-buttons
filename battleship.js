@@ -29,15 +29,25 @@ var model = {
     for (var i = 0; i < this.numShips; i++) {
       //getting the ship
       var ship = this.ships[i];
-      var locations = ship.locations;
-      //get locations index with the guess
-      var index = locations.indexOf(guess);
+
+      var index = ship.locations.indexOf(guess);
       //check if index is a hit
       if (index >= 0) {
         ship.hits[index] = "hit";
+        if (this.isSunk(ship)) {
+          this.shipsSunk++;
+        }
         return true;
       }
     }
     return false;
+  },
+  isSunk: function(ship) {
+    for (var i = 0; i < this.shipLength; i++) {
+      if (ship.hits[i] !== "hit") {
+        return false;
+      }
+    }
+    return true;
   }
 };
