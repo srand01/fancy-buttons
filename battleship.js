@@ -34,6 +34,8 @@ var model = {
       //check if index is a hit
       if (index >= 0) {
         ship.hits[index] = "hit";
+        view.displayHit(guess);
+        view.displayMessage("HIT!");
         if (this.isSunk(ship)) {
           this.shipsSunk++;
         }
