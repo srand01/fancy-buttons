@@ -61,3 +61,10 @@ var controller = {
   guesses: 0,
   processGuess: function(guess) {}
 };
+
+//parseGuess function
+function parseGuess(guess) {
+  if (guess === null || guess.shipLength !== 2) {
+    alert("Oo, please enter a letter and a number on the board");
+  }
+}
