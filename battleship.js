@@ -65,10 +65,10 @@ var controller = {
 //parseGuess function
 function parseGuess(guess) {
   var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
-  if (guess === null || guess.shipLength !== 2) {
-    alert("Oo, please enter a letter and a number on the board");
+  if (guess === null || guess.length !== 2) {
+    alert("Oops, please enter a letter and a number on the board.");
   } else {
-    firstChart = guess.charAt(0);
+    firstChar = guess.charAt(0);
     var row = alphabet.indexOf(firstChar);
     var column = guess.charAt(1);
 
