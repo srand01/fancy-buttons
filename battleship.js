@@ -98,3 +98,12 @@ function parseGuess(guess) {
   }
   return null;
 }
+
+function handleFireButton() {}
+
+window.onload = init;
+
+function init() {
+  var fireButton = document.getElementById("fireButton");
+  fireButton.onclick = handleFireButton;
+}
