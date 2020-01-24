@@ -59,7 +59,11 @@ var model = {
 
 var controller = {
   guesses: 0,
-  processGuess: function(guess) {}
+  processGuess: function(guess) {
+    var location = parseGuess(guess);
+    if (location) {
+    }
+  }
 };
 
 //parseGuess function
