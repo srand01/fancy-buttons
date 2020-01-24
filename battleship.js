@@ -64,6 +64,11 @@ var controller = {
     if (location) {
       this.guesses++;
       var hit = model.fire(location);
+      if (hit && model.shipsSunk === model.numShips) {
+        view.displayMessage(
+          "You sank all y battleships, in " + this.guesses + " guesses"
+        );
+      }
     }
   }
 };
