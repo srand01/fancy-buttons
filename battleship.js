@@ -81,6 +81,9 @@ function parseGuess(guess) {
       column >= model.boardSize
     ) {
       alert("Oops, that's off the board!");
+    } else {
+      return row + column;
     }
   }
+  return null;
 }
