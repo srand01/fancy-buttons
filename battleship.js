@@ -66,7 +66,7 @@ var controller = {
       var hit = model.fire(location);
       if (hit && model.shipsSunk === model.numShips) {
         view.displayMessage(
-          "You sank all y battleships, in " + this.guesses + " guesses"
+          "You sank all my battleships, in " + this.guesses + " guesses"
         );
       }
     }
