@@ -55,7 +55,17 @@ var model = {
     }
     return true;
   },
-  generateShipLocations: function() {}
+  generateShipLocations: function() {
+    var locations;
+    for (var i = 0; i < this.numShips; i++) {
+      {
+        do {
+          locations = this.generateShip();
+        } while (this.collision(locations));
+        this.ships[i].locations = locations;
+      }
+    }
+  }
 };
 
 var controller = {
