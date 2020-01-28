@@ -70,11 +70,17 @@ var model = {
     var direction = Math.floor(Math.random() * 2);
     var row, col;
 
-    if (direction === 1){
-
-    } else{
-      
+    if (direction === 1) {
+    } else {
     }
+
+    var newShipLocations = [];
+    for (var i = 0; i < this.shipLength; i++) {
+      if (direction === 1) {
+      } else {
+      }
+    }
+    return newShipLocations;
   }
 };
 
