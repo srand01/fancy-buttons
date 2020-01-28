@@ -65,7 +65,8 @@ var model = {
         this.ships[i].locations = locations;
       }
     }
-  }
+  },
+  generateShip: function() {}
 };
 
 var controller = {
